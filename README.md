@@ -9,10 +9,10 @@ req.sendRequest(url, metod, param, sync);
 where 
 * url : is a server addres,
 * method : is a metod of query ('get'|'post'). this parameter can de omitted (by default 'get')
-* param : is a query parameters, in the form of a string, number, or object containing key-vaue. In the case where param is object, object automatically converted into a JSON string or URL parameters
-sync : is a aynchronous request flag. default is TRUE
+* param : is a query parameters, in the form of a string, number, or object containing key-value. In the case where param is object, object automatically converted into a JSON string or URL parameters
+* sync : is a asynchronous request flag. default is TRUE
 ---
-you can also set event handlers for
+you can also set event handlers for:
 * start the query
 ```js
 req.requestStart = function(){do something};
@@ -36,7 +36,7 @@ req.requestStart = function(){
 }
 req.requestComplite = function(){
     stopLoadBar();
-    console.log("reaponse : " + this.responseText);
+    console.log("response : " + this.responseText);
 }
 req.requestError = function(){
     stopLoadBar();
